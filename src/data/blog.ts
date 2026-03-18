@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Custom Web Application Development: Everything You Need to Know',
     excerpt: 'A comprehensive guide on why custom software often outperforms off-the-shelf solutions for growing businesses.',
     date: 'Nov 05, 2023',
-    author: 'Osman Malik',
+    author: 'Muhammad Imran Shafiq',
     category: 'Development',
     image: 'https://picsum.photos/seed/dev-blog/800/600'
   },

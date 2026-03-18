@@ -13,12 +13,12 @@ interface FAQItemProps {
 
 function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
   return (
-    <div className="border-b border-slate-200 dark:border-slate-800 last:border-0">
+    <div className="border-b border-slate-200 last:border-0">
       <button
         onClick={onClick}
         className="flex items-center justify-between w-full py-6 text-left group"
       >
-        <span className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+        <span className="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
           {question}
         </span>
         <ChevronDown
@@ -38,7 +38,7 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="pb-6 text-slate-600 leading-relaxed">
               {answer}
             </p>
           </motion.div>

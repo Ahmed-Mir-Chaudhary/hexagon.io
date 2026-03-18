@@ -41,7 +41,7 @@ export default function IndustryDetail() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -62,10 +62,10 @@ export default function IndustryDetail() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200"
                   >
                     <CheckCircle2 className="text-brand-600 shrink-0" size={20} />
-                    <span className="font-medium text-slate-700 dark:text-slate-300">{solution}</span>
+                    <span className="font-medium text-slate-700">{solution}</span>
                   </motion.div>
                 ))}
               </div>
@@ -76,7 +76,7 @@ export default function IndustryDetail() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
                 <img 
                   src={`https://picsum.photos/seed/${slug}/800/450`} 
                   alt={industryName}
@@ -84,14 +84,14 @@ export default function IndustryDetail() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 hidden md:block">
+              <div className="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-white shadow-xl border border-slate-200 hidden md:block">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600">
+                  <div className="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600">
                     <TrendingUp size={24} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Industry Impact</div>
-                    <div className="text-xl font-display font-bold text-slate-900 dark:text-white">Proven Results</div>
+                    <div className="text-sm font-bold text-slate-500 uppercase tracking-wider">Industry Impact</div>
+                    <div className="text-xl font-display font-bold text-slate-900">Proven Results</div>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function IndustryDetail() {
 
       {/* Case Studies Section */}
       {relatedCaseStudies.length > 0 && (
-        <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <section className="py-24 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
               centered
@@ -115,13 +115,13 @@ export default function IndustryDetail() {
                 <Link 
                   key={cs.id} 
                   to={`/case-studies/${cs.slug}`}
-                  className="group block p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all shadow-sm hover:shadow-xl"
+                  className="group block p-8 rounded-3xl bg-white border border-slate-200 hover:border-brand-500/50 transition-all shadow-sm hover:shadow-xl"
                 >
                   <div className="aspect-video rounded-2xl overflow-hidden mb-6">
                     <img src={cs.image} alt={cs.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 group-hover:text-brand-600 transition-colors">{cs.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">{cs.description}</p>
+                  <h3 className="text-2xl font-display font-bold text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">{cs.title}</h3>
+                  <p className="text-slate-600 mb-6 line-clamp-2">{cs.description}</p>
                   <div className="flex items-center text-brand-600 font-bold gap-2">
                     Read Case Study <ArrowRight size={18} />
                   </div>
@@ -133,7 +133,7 @@ export default function IndustryDetail() {
       )}
 
       {/* Services Section */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             centered
@@ -146,13 +146,13 @@ export default function IndustryDetail() {
               <Link 
                 key={service.id} 
                 to={`/services/${service.slug}`}
-                className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all group"
+                className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-brand-500/50 transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Briefcase size={24} />
                 </div>
-                <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-4">{service.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-display font-bold text-slate-900 mb-4">{service.title}</h3>
+                <p className="text-slate-600 mb-6 text-sm leading-relaxed">{service.description}</p>
                 <div className="flex items-center text-brand-600 font-bold gap-2 text-sm">
                   Learn More <ArrowRight size={16} />
                 </div>

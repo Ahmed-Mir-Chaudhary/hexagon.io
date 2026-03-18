@@ -37,7 +37,7 @@ export default function Industries() {
               placeholder="Search industries..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-brand-500 outline-none shadow-sm transition-all"
+              className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none shadow-sm transition-all"
             />
           </div>
 
@@ -49,9 +49,9 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all group"
+                className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-brand-500/50 transition-all group"
               >
-                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-6 group-hover:text-brand-600 transition-colors">
+                <h3 className="text-2xl font-display font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">
                   {industry}
                 </h3>
                 <div className="space-y-6">
@@ -59,7 +59,7 @@ export default function Industries() {
                     <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Common Solutions</div>
                     <div className="flex flex-wrap gap-2">
                       {(industrySolutions[industry] || ["Staff Augmentation", "Custom Software"]).map(sol => (
-                        <span key={sol} className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-slate-600 dark:text-slate-400">
+                        <span key={sol} className="px-3 py-1 rounded-lg bg-slate-100 text-xs font-bold text-slate-600">
                           {sol}
                         </span>
                       ))}
@@ -79,7 +79,7 @@ export default function Industries() {
       </section>
 
       {/* Global Impact */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">

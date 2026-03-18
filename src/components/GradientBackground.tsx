@@ -12,12 +12,12 @@ export function GradientBackground() {
         repeat: Infinity,
         ease: "easeInOut"
       }}
-      className="absolute inset-0 overflow-hidden pointer-events-none bg-white dark:bg-slate-950"
+      className="absolute inset-0 overflow-hidden pointer-events-none bg-white"
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-mesh opacity-60 dark:opacity-30" />
+      <div className="absolute top-0 left-0 w-full h-full bg-mesh opacity-60" />
       
       {/* Animated Atmospheric Blobs (UK Dim & Dark Theme) */}
-      <div className="absolute inset-0 opacity-30 dark:opacity-40">
+      <div className="absolute inset-0 opacity-30">
         <motion.div
           animate={{
             x: [0, 100, 0],
@@ -96,7 +96,7 @@ export function GradientBackground() {
               fill={isOutline ? "none" : "currentColor"}
               stroke="currentColor"
               strokeWidth={isOutline ? 0.5 : 0}
-              className="text-brand-500/60 dark:text-brand-400/30"
+              className="text-brand-500/60"
             >
               <path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z" />
             </svg>

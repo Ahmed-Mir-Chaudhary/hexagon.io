@@ -21,7 +21,7 @@ export function BlogCard({ title, excerpt, date, author, category, image, slug, 
     <motion.div
       whileHover={{ y: -8 }}
       className={cn(
-        "group flex flex-col bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brand-500/30 transition-all duration-300",
+        "group flex flex-col bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-500/30 transition-all duration-300",
         className
       )}
     >
@@ -43,15 +43,15 @@ export function BlogCard({ title, excerpt, date, author, category, image, slug, 
             {date}
           </div>
         </div>
-        <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-4 line-clamp-2 group-hover:text-brand-600 transition-colors">
+        <h3 className="text-xl font-display font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-brand-600 transition-colors">
           {title}
         </h3>
-        <p className="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3 leading-relaxed flex-1">
+        <p className="text-slate-600 mb-8 line-clamp-3 leading-relaxed flex-1">
           {excerpt}
         </p>
         <Link
           to={`/blog/${slug}`}
-          className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-brand-600 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-brand-600 transition-colors"
         >
           Read Article <ArrowRight size={16} />
         </Link>

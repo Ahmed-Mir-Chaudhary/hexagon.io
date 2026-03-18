@@ -42,7 +42,7 @@ export function SectionHeading({
         transition={{ delay: 0.1 }}
         className={cn(
           "text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6",
-          light ? "text-white" : "text-slate-900 dark:text-white"
+          light ? "text-white" : "text-slate-900"
         )}
       >
         {title}
@@ -55,7 +55,7 @@ export function SectionHeading({
           transition={{ delay: 0.2 }}
           className={cn(
             "text-lg md:text-xl leading-relaxed",
-            light ? "text-slate-300" : "text-slate-700 dark:text-slate-400"
+            light ? "text-slate-300" : "text-slate-700"
           )}
         >
           {description}

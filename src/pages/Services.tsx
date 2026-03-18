@@ -40,7 +40,7 @@ export default function Services() {
                   "px-6 py-2.5 rounded-full text-sm font-bold transition-all",
                   activeTab === cat
                     ? "bg-brand-600 text-white shadow-lg shadow-brand-500/25"
-                    : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:border-brand-500/50"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-brand-500/50"
                 )}
               >
                 {cat}
@@ -63,7 +63,7 @@ export default function Services() {
       </section>
 
       {/* Engagement Models */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             centered
@@ -96,13 +96,13 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-10 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
+                className="p-10 rounded-3xl bg-slate-50 border border-slate-200"
               >
-                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-6">{model.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">{model.desc}</p>
+                <h3 className="text-2xl font-display font-bold text-slate-900 mb-6">{model.title}</h3>
+                <p className="text-slate-600 mb-8 leading-relaxed">{model.desc}</p>
                 <ul className="space-y-4">
                   {model.features.map(f => (
-                    <li key={f} className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+                    <li key={f} className="flex items-center gap-3 text-sm font-medium text-slate-700">
                       <CheckCircle2 size={18} className="text-brand-600" />
                       {f}
                     </li>

@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Hexagon, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/src/lib/utils';
-import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -38,8 +37,8 @@ export function Navbar() {
         backdropFilter: (scrolled || isOpen) ? 'blur(16px)' : 'blur(0px)',
         borderBottomWidth: (scrolled || isOpen) ? '1px' : '0px',
         borderBottomColor: (scrolled || isOpen) ? 'var(--nav-border)' : 'transparent',
-        boxShadow: scrolled 
-          ? (document.documentElement.classList.contains('dark') ? '0 20px 25px -5px rgba(0, 0, 0, 0.3)' : '0 20px 25px -5px rgba(0, 0, 0, 0.05)')
+        boxShadow: scrolled
+          ? '0 20px 25px -5px rgba(0, 0, 0, 0.05)'
           : '0 0px 0px 0px rgba(0, 0, 0, 0)',
       }}
       transition={{ 
@@ -64,7 +63,7 @@ export function Navbar() {
                     <div className="w-1.5 h-1.5 bg-brand-600 rounded-full" />
                   </div>
                 </div>
-                <span className="text-xl font-display font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap">
+                <span className="text-xl font-display font-bold tracking-tight text-slate-900 whitespace-nowrap">
                   HexagonTech<span className="text-brand-600">.ai</span>
                 </span>
               </Link>
@@ -77,7 +76,7 @@ export function Navbar() {
                   to={link.href}
                   className={cn(
                     "text-sm font-semibold transition-colors hover:text-brand-600 whitespace-nowrap",
-                    location.pathname === link.href ? "text-brand-600" : "text-slate-700 dark:text-slate-300"
+                    location.pathname === link.href ? "text-brand-600" : "text-slate-700"
                   )}
                 >
                   {link.name}
@@ -86,7 +85,6 @@ export function Navbar() {
             </div>
 
             <div className="col-span-3 flex items-center justify-end gap-4">
-              <ThemeToggle />
               <Link
                 to="/contact"
                 className="px-5 py-2.5 text-sm font-bold text-white bg-brand-600 rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-brand-500/25 whitespace-nowrap"
@@ -105,14 +103,13 @@ export function Navbar() {
                   <div className="w-1.5 h-1.5 bg-brand-600 rounded-full" />
                 </div>
               </div>
-              <span className="text-xl font-display font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap">
+              <span className="text-xl font-display font-bold tracking-tight text-slate-900 whitespace-nowrap">
                 HexagonTech<span className="text-brand-600">.ai</span>
               </span>
             </Link>
 
             <div className="flex items-center gap-4">
               <div className="hidden md:flex items-center gap-4">
-                <ThemeToggle />
                 <Link
                   to="/contact"
                   className="px-5 py-2.5 text-sm font-bold text-white bg-brand-600 rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-brand-500/25 whitespace-nowrap"
@@ -120,14 +117,10 @@ export function Navbar() {
                   Book a Call
                 </Link>
               </div>
-              
-              <div className="md:hidden flex items-center gap-4">
-                <ThemeToggle />
-              </div>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                className="p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -143,7 +136,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-slate-200 dark:border-slate-800 overflow-hidden"
+            className="md:hidden glass border-t border-slate-200 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -152,7 +145,7 @@ export function Navbar() {
                   to={link.href}
                   className={cn(
                     "block text-lg font-medium py-2",
-                    location.pathname === link.href ? "text-brand-600" : "text-slate-700 dark:text-slate-300"
+                    location.pathname === link.href ? "text-brand-600" : "text-slate-700"
                   )}
                 >
                   {link.name}
@@ -167,7 +160,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="w-full py-3 text-center font-semibold text-brand-600 border border-brand-200 rounded-xl dark:border-brand-800"
+                  className="w-full py-3 text-center font-semibold text-brand-600 border border-brand-200 rounded-xl"
                 >
                   Get a Quote
                 </Link>

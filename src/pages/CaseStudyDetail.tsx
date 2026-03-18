@@ -13,7 +13,7 @@ export default function CaseStudyDetail() {
   return (
     <div className="pb-24">
       {/* Hero */}
-      <section className="pt-20 pb-32 bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
+      <section className="pt-20 pb-32 bg-slate-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Link
@@ -24,10 +24,10 @@ export default function CaseStudyDetail() {
           </Link>
           
           <div className="max-w-4xl">
-            <span className="inline-block px-4 py-1 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="inline-block px-4 py-1 rounded-full bg-brand-100 text-brand-600 text-xs font-bold uppercase tracking-widest mb-6">
               {study.industry}
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-8 leading-tight">
               {study.title}
             </h1>
           </div>
@@ -37,7 +37,7 @@ export default function CaseStudyDetail() {
       {/* Main Image */}
       <section className="-mt-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-900">
+          <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
             <img
               src={study.image}
               alt={study.title}
@@ -49,45 +49,45 @@ export default function CaseStudyDetail() {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-16">
               <div>
-                <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">Overview</h2>
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Overview</h2>
+                <p className="text-lg text-slate-600 leading-relaxed">
                   {study.content.overview}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">The Challenge</h3>
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">The Challenge</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     {study.content.challenge}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Our Approach</h3>
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">Our Approach</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     {study.content.approach}
                   </p>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">The Solution</h2>
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">The Solution</h2>
+                <p className="text-lg text-slate-600 leading-relaxed mb-8">
                   {study.content.solution}
                 </p>
-                <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100">
                   <h4 className="text-xl font-bold mb-6">Key Impact Metrics</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {study.content.impact.map((item, idx) => (
                       <div key={idx} className="flex gap-3">
                         <CheckCircle2 size={20} className="text-brand-600 shrink-0 mt-1" />
-                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{item}</span>
+                        <span className="text-sm font-bold text-slate-700">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -114,9 +114,9 @@ export default function CaseStudyDetail() {
                 </Link>
               </div>
 
-              <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Ready to Scale?</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">
+              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Ready to Scale?</h3>
+                <p className="text-slate-600 text-sm mb-6">
                   Learn how we can help you achieve similar results with our dedicated engineering teams.
                 </p>
                 <Link to="/contact" className="text-brand-600 font-bold text-sm hover:underline">

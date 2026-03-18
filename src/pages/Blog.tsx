@@ -40,7 +40,7 @@ export default function Blog() {
                   "px-6 py-2.5 rounded-full text-sm font-bold transition-all",
                   activeCategory === cat
                     ? "bg-brand-600 text-white shadow-lg shadow-brand-500/25"
-                    : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:border-brand-500/50"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-brand-500/50"
                 )}
               >
                 {cat}
@@ -66,7 +66,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-12 md:p-20 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-mesh opacity-20" />

@@ -12,7 +12,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="p-8 md:p-12 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl">
+    <div className="p-8 md:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl">
       <AnimatePresence mode="wait">
         {status === 'success' ? (
           <motion.div
@@ -20,11 +20,11 @@ export function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-12"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 mb-6">
               <CheckCircle2 size={40} />
             </div>
-            <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Message Sent!</h3>
-            <p className="text-slate-600 dark:text-slate-400">
+            <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">Message Sent!</h3>
+            <p className="text-slate-600">
               Thank you for reaching out. Our team will get back to you within 24 hours.
             </p>
             <button
@@ -44,27 +44,27 @@ export function ContactForm() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Full Name</label>
+                <label className="text-sm font-bold text-slate-700">Full Name</label>
                 <input
                   required
                   type="text"
                   placeholder="John Doe"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-brand-500 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Email Address</label>
+                <label className="text-sm font-bold text-slate-700">Email Address</label>
                 <input
                   required
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-brand-500 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Subject</label>
-              <select className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+              <label className="text-sm font-bold text-slate-700">Subject</label>
+              <select className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all">
                 <option>Staff Augmentation</option>
                 <option>Custom Software Development</option>
                 <option>Cloud & DevOps</option>
@@ -73,12 +73,12 @@ export function ContactForm() {
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-bold text-slate-700 dark:text-slate-300">Message</label>
+              <label className="text-sm font-bold text-slate-700">Message</label>
               <textarea
                 required
                 rows={5}
                 placeholder="Tell us about your project..."
-                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-brand-500 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition-all resize-none"
               />
             </div>
             <button

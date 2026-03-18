@@ -6,11 +6,18 @@ import { Mail, Phone, MapPin, Clock, Calendar, Users } from 'lucide-react';
 
 const offices = [
   {
-    country: 'United Kingdom',
-    address: '118 North Street, Leeds LS2 7PN',
+    country: 'United States',
+    address: 'N. Amberbrooke Ave, Tucson, AZ 85745',
+    phone: '+1 (347) 265-0079',
+    email: 'us@hexagontech.ai',
+    image: '/images/office-usa.jpg'
+  },
+  {
+    country: 'Pakistan - Lahore',
+    address: 'LUMS, Sector U, DHA Phase 5, Lahore 54792',
     phone: '+44 20 8079 2080',
-    email: 'uk@hexagontech.ai',
-    image: 'https://picsum.photos/seed/leeds/400/300'
+    email: 'lahore@hexagontech.ai',
+    image: '/images/office-lahore.png'
   },
   {
     country: 'Pakistan',
@@ -49,16 +56,16 @@ export default function Contact() {
             
             <div className="space-y-12">
               <div>
-                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8">What Happens Next?</h3>
+                <h3 className="text-2xl font-display font-bold text-slate-900 mb-8">What Happens Next?</h3>
                 <div className="space-y-8">
                   {steps.map((step, idx) => (
                     <div key={step.title} className="flex gap-6">
-                      <div className="shrink-0 w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
                         {idx + 1}
                       </div>
                       <div>
-                        <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{step.title}</h4>
-                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{step.desc}</p>
+                        <h4 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h4>
+                        <p className="text-slate-600 leading-relaxed">{step.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -68,9 +75,9 @@ export default function Contact() {
               <div className="p-8 rounded-3xl bg-slate-900 text-white">
                 <h3 className="text-xl font-bold mb-6">Direct Contact</h3>
                 <div className="space-y-4">
-                  <a href="tel:+442080792080" className="flex items-center gap-4 hover:text-brand-400 transition-colors">
+                  <a href="tel:+13472650079" className="flex items-center gap-4 hover:text-brand-400 transition-colors">
                     <Phone size={20} className="text-brand-400" />
-                    <span className="font-medium">+44 20 8079 2080</span>
+                    <span className="font-medium">+1 (347) 265-0079</span>
                   </a>
                   <a href="mailto:contact@hexagontech.ai" className="flex items-center gap-4 hover:text-brand-400 transition-colors">
                     <Mail size={20} className="text-brand-400" />
@@ -84,7 +91,7 @@ export default function Contact() {
       </section>
 
       {/* Offices */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             centered
@@ -93,7 +100,7 @@ export default function Contact() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {offices.map((office) => (
-              <div key={office.country} className="group rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+              <div key={office.country} className="group rounded-3xl overflow-hidden border border-slate-200 bg-slate-50">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={office.image}
@@ -103,17 +110,17 @@ export default function Contact() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">{office.country}</h3>
+                  <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">{office.country}</h3>
                   <div className="space-y-4">
-                    <div className="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+                    <div className="flex items-start gap-3 text-slate-600">
                       <MapPin size={18} className="text-brand-600 shrink-0 mt-1" />
                       <span>{office.address}</span>
                     </div>
-                    <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                    <div className="flex items-center gap-3 text-slate-600">
                       <Phone size={18} className="text-brand-600 shrink-0" />
                       <span>{office.phone}</span>
                     </div>
-                    <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                    <div className="flex items-center gap-3 text-slate-600">
                       <Mail size={18} className="text-brand-600 shrink-0" />
                       <span>{office.email}</span>
                     </div>
